@@ -1,3 +1,6 @@
+
+
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,17 +8,6 @@
   text-align: center;
 }
 
-body {
-  margin: 0; 
-  height: 100vh; 
-  background-image: url('/alejandravacuii_comingSoon.jpg'); 
-  background-size: cover; 
-  background-position: center; 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  color: white; 
-}
 
 body {
   margin: 0;
@@ -56,20 +48,29 @@ body::after {
   }
 }
 
-h1 {
+h1, h2 {
   font-family: 'Libre Baskerville', serif; 
-  font-size: 4rem; 
+  font-size: 8vh; /* Responsive font size */
   z-index: 2; 
   position: relative;
   color: rgba(255, 255, 255, 0.08);
-  transform: translateY(290px);
+  transform: translateY(150%); /* Center vertically */
+  margin: 0; /* Remove default margin */
 }
 
-h2 {
-  font-family: 'Libre Baskerville', serif; 
-  font-size: 4rem; 
-  z-index: 2; 
-  position: relative;
-  color: rgba(255, 255, 255, 0.08);
-  transform: translateY(225px);
+h1 {
+  margin-bottom: -40px; /* Aimed at space between h1 and h2 */
+ 
 }
+
+@media (max-width: 600px) {
+  h1, h2 {
+    font-size: 6vh; /* To make smaller font size for smaller screens */
+  }
+
+  body {
+  background-position: 52% center;
+  }
+  
+}
+
