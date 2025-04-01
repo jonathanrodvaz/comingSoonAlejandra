@@ -1,5 +1,14 @@
 
+* {
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure full height */
+  overflow: hidden; /* Prevent scrolling */
+}
 
 #root {
   max-width: 1280px;
@@ -10,8 +19,7 @@
 
 
 body {
-  margin: 0;
-  height: 100vh;
+  height: 100vh; 
   background-image: url('/alejandravacuii_comingSoon.jpg');
   background-size: cover;
   background-position: center;
@@ -50,17 +58,32 @@ body::after {
 
 h1, h2 {
   font-family: 'Libre Baskerville', serif; 
-  font-size: 8vh; /* Responsive font size */
+  font-size: 6vh; /* Responsive font size */
   z-index: 2; 
   position: relative;
   color: rgba(255, 255, 255, 0.08);
-  transform: translateY(150%); /* Center vertically */
+  transform: translateY(270%); /* Center vertically */
   margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
 
 h1 {
-  margin-bottom: -40px; /* Aimed at space between h1 and h2 */
+  margin-bottom: -50px; /* Aimed at space between h1 and h2 */
  
+}
+
+.footer {
+  font-size: 1vh;
+  font-family: 'Libre Baskerville', serif; 
+  position: fixed; /* Change to fixed */
+  bottom: 0; /* Stick to the bottom */
+  left: 0; /* Align to the left */
+  right: 0; /* Align to the right */
+  color: rgba(5, 4, 4, 0.288);
+  padding: 0rem; /* Corrected casing */
+  text-align: center; /* Center the text */
+  
+  
 }
 
 @media (max-width: 600px) {
@@ -73,4 +96,5 @@ h1 {
   }
   
 }
+
 

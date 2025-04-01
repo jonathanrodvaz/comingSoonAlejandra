@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import React, { useState } from 'react';
 import './App.css'
+import Footer from './Footer';
 
 
 
@@ -11,7 +12,7 @@ function App() {
      
       <h1>coming</h1>
       <h2>soon</h2>
-
+      <Footer />
     </>
   )
 }
