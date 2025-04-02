@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import './App.css'
 import Footer from './Footer';
-
+import useOrientation from './useOrientation';
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const isLandscape = useOrientation();
 
   return (
     <>

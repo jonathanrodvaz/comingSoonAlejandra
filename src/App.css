@@ -39,20 +39,20 @@ body::after {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 1); /* Black overlay */
-  opacity: 0; /* Start fully transparent */
+  opacity: 1; /* Start fully transparent */
   animation: fade 17s ease-in-out infinite; /* Animation */
   z-index: 1; /* Place it above the background */
 }
 
 @keyframes fade {
   100% {
-      opacity: 0; /* Start transparent */
+      opacity: 1; /* Start fully opaque */
   }
   50% {
-      opacity: 1; /* Fade to fully opaque */
+      opacity: 0; /* Fade to fully transparent */
   }
   0% {
-      opacity: 0; /* Fade back to transparent */
+      opacity: 1; /* Fade back to opaque */
   }
 }
 
@@ -68,8 +68,12 @@ h1, h2 {
 }
 
 h1 {
-  margin-bottom: -50px; /* Aimed at space between h1 and h2 */
+  margin-bottom: 20px; /* Aimed at space between h1 and h2 */
  
+}
+
+h2 {
+  margin-top: -80px;
 }
 
 .footer {
@@ -89,6 +93,7 @@ h1 {
 @media (max-width: 600px) {
   h1, h2 {
     font-size: 6vh; /* To make smaller font size for smaller screens */
+    margin-bottom: 15px;
   }
 
   body {
@@ -97,4 +102,34 @@ h1 {
   
 }
 
+/*Media queries for the different orientations and screen sizes */
+@media (orientation: landscape){
+h1 {
+  margin-bottom: 50px;
+}
 
+}
+
+@media (orientation: portrait) {
+  h1 {
+    margin-bottom: 25px;
+  }
+}
+.app.landscape {
+  background-color:black;
+}
+
+.app.portrait {
+  background-color:black;
+}
+
+.orientation-warning {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  padding: 1rem;
+  border-radius: 5px;
+  z-index: 10;
+}
