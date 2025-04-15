@@ -8,13 +8,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <p>© 2025 Alejandra Vacuii</p>
-      <a href="https://www.instagram.com/lamalafortuna/" target="_blank" rel="noopener noreferrer">
-        <img 
-          src={InstagramIcon} 
-          alt="Instagram" 
-          className="instagram-icon" 
-        />
-      </a>
+  
     </footer>
   );
 };
